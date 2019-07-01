@@ -1,3 +1,5 @@
+import bpy
+
 bl_info = {
     "name": "split-toning",
     "author": "Yuki Koyama",
@@ -11,6 +13,11 @@ bl_info = {
     "tracker_url": "",
     "category": "Node"
 }
+
+
+class AddSplitToningNodeOperator(bpy.types.Operator):
+    bl_idname = "node.add_split_toning_node_operator"
+    bl_label = "Add Split-Toning Node Operator"
 
 
 def register():
