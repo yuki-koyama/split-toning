@@ -1,6 +1,6 @@
 # split-toning
 
-A Blender addon for simulating the Split Toning effect in Adobe Lightroom/Photoshop
+A Blender add-on for simulating the Split Toning effect in Adobe Lightroom/Photoshop
 
 ## Contributing
 
