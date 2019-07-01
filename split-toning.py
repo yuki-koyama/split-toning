@@ -139,9 +139,19 @@ def create_split_tone_node(node_tree):
 class AddSplitToningNodeOperator(bpy.types.Operator):
     bl_idname = "node.add_split_toning_node_operator"
     bl_label = "Split-Toning"
+    bl_options = {"REGISTER", "UNDO"}
 
     def execute(self, context):
-        self.report({'WARNING'}, "TODO: This function is under construction...")
+        if not bpy.context.scene.use_nodes:
+            self.report({'ERROR'}, "Failed to add a split-toning node because the scene does not use nodes currently.")
+            return {'CANCELLED'}
+
+        if not "SplitTone" in bpy.data.node_groups:
+            add_split_tone_node_group()
+
+        create_split_tone_node(bpy.context.scene.node_tree)
+
+        self.report({'INFO'}, "A split-toning node is added to the node tree.")
         return {'FINISHED'}
 
 
