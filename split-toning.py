@@ -24,19 +24,20 @@ class AddSplitToningNodeOperator(bpy.types.Operator):
         return {'FINISHED'}
 
 
-def menu_fn(self, context):
+def menu_func(self, context):
     self.layout.separator()
     self.layout.operator(AddSplitToningNodeOperator.bl_idname)
 
 
 def register():
     bpy.utils.register_module(__name__)
-    bpy.types.NODE_MT_add.append(menu_fn)
+    bpy.types.NODE_MT_add.append(menu_func)
+
     print("split-toning: registered.")
 
 
 def unregister():
-    bpy.types.NODE_MT_add.remove(menu_fn)
+    bpy.types.NODE_MT_add.remove(menu_func)
     bpy.utils.unregister_module(__name__)
     print("split-toning: unregistered.")
 
