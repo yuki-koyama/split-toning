@@ -4,13 +4,12 @@ bl_info = {
     "version": (0, 0),
     "blender": (2, 79, 0),
     "location": "",
-    "description":
-    "Simulating the Split Toning effect in Adobe Lightroom/Photoshop",
+    "description": "Simulating the Split Toning effect in Adobe Lightroom/Photoshop",
     "warning": "",
     "support": "TESTING",
     "wiki_url": "",
     "tracker_url": "",
-    "category": "Render"
+    "category": "Node"
 }
 
 
