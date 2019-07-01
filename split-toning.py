@@ -19,6 +19,10 @@ class AddSplitToningNodeOperator(bpy.types.Operator):
     bl_idname = "node.add_split_toning_node_operator"
     bl_label = "Split-Toning"
 
+    def execute(self, context):
+        self.report({'WARNING'}, "TODO: This function is under construction...")
+        return {'FINISHED'}
+
 
 def menu_fn(self, context):
     self.layout.separator()
