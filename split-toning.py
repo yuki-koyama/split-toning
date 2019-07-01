@@ -5,7 +5,7 @@ bl_info = {
     "author": "Yuki Koyama",
     "version": (0, 0),
     "blender": (2, 79, 0),
-    "location": "",
+    "location": "Node Editor (or Compositor) > Add",
     "description": "Simulating the Split Toning effect in Adobe Lightroom/Photoshop",
     "warning": "",
     "support": "TESTING",
@@ -170,6 +170,7 @@ def register():
 def unregister():
     bpy.types.NODE_MT_add.remove(menu_func)
     bpy.utils.unregister_module(__name__)
+
     print("split-toning: unregistered.")
 
 
