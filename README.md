@@ -6,15 +6,15 @@ A Blender add-on for simulating the Split Toning effect in Adobe Lightroom/Photo
 
 Original:
 
-![](./examples/classroom-original.jpg)
+![](./docs/classroom-original.jpg)
 
 Adjusted (1):
 
-![](./examples/classroom-warm.jpg)
+![](./docs/classroom-warm.jpg)
 
 Adjusted (2):
 
-![](./examples/classroom-cool.jpg)
+![](./docs/classroom-cool.jpg)
 
 ## Usage
 
