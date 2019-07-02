@@ -3,7 +3,7 @@ import bpy
 bl_info = {
     "name": "split-toning",
     "author": "Yuki Koyama",
-    "version": (0, 0),
+    "version": (1, 0),
     "blender": (2, 79, 0),
     "location": "Node Editor > Add",
     "description": "Simulating the Split Toning effect in Adobe Lightroom/Photoshop",
