@@ -16,10 +16,10 @@ bl_info = {
 
 
 def add_split_tone_node_group():
-    assert not "SplitTone" in bpy.data.node_groups
-    assert not "SplitToneSub" in bpy.data.node_groups
+    assert not "Split Toning" in bpy.data.node_groups
+    assert not "Split Toning Sub" in bpy.data.node_groups
 
-    group = bpy.data.node_groups.new(type="CompositorNodeTree", name="SplitToneSub")
+    group = bpy.data.node_groups.new(type="CompositorNodeTree", name="Split Toning Sub")
 
     input_node = group.nodes.new("NodeGroupInput")
     group.inputs.new("NodeSocketColor", "Image")
@@ -57,7 +57,7 @@ def add_split_tone_node_group():
 
     # --------------------------------------------------------------------------
 
-    group = bpy.data.node_groups.new(type="CompositorNodeTree", name="SplitTone")
+    group = bpy.data.node_groups.new(type="CompositorNodeTree", name="Split Toning")
 
     input_node = group.nodes.new("NodeGroupInput")
 
@@ -97,11 +97,11 @@ def add_split_tone_node_group():
 
     shadows_node = group.nodes.new(type='CompositorNodeGroup')
     shadows_node.name = "Shadows"
-    shadows_node.node_tree = bpy.data.node_groups["SplitToneSub"]
+    shadows_node.node_tree = bpy.data.node_groups["Split Toning Sub"]
 
     highlights_node = group.nodes.new(type='CompositorNodeGroup')
     highlights_node.name = "Highlights"
-    highlights_node.node_tree = bpy.data.node_groups["SplitToneSub"]
+    highlights_node.node_tree = bpy.data.node_groups["Split Toning Sub"]
 
     comb_node = group.nodes.new(type="CompositorNodeMixRGB")
     comb_node.use_clamp = False
@@ -130,8 +130,8 @@ def add_split_tone_node_group():
 
 def create_split_tone_node(node_tree):
     node = node_tree.nodes.new(type='CompositorNodeGroup')
-    node.name = "SplitTone"
-    node.node_tree = bpy.data.node_groups["SplitTone"]
+    node.name = "Split Toning"
+    node.node_tree = bpy.data.node_groups["Split Toning"]
 
     return node
 
@@ -146,7 +146,7 @@ class AddSplitToningNodeOperator(bpy.types.Operator):
             self.report({'ERROR'}, "Failed to add a split-toning node because the scene does not use nodes currently.")
             return {'CANCELLED'}
 
-        if not "SplitTone" in bpy.data.node_groups:
+        if not "Split Toning" in bpy.data.node_groups:
             add_split_tone_node_group()
 
         create_split_tone_node(bpy.context.scene.node_tree)
