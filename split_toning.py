@@ -98,10 +98,12 @@ def add_split_tone_node_group():
     shadows_node = group.nodes.new(type='CompositorNodeGroup')
     shadows_node.name = "Shadows"
     shadows_node.node_tree = bpy.data.node_groups["Split Toning Sub"]
+    shadows_node.show_options = False
 
     highlights_node = group.nodes.new(type='CompositorNodeGroup')
     highlights_node.name = "Highlights"
     highlights_node.node_tree = bpy.data.node_groups["Split Toning Sub"]
+    highlights_node.show_options = False
 
     comb_node = group.nodes.new(type="CompositorNodeMixRGB")
     comb_node.use_clamp = False
@@ -132,6 +134,7 @@ def create_split_tone_node(node_tree):
     node = node_tree.nodes.new(type='CompositorNodeGroup')
     node.name = "Split Toning"
     node.node_tree = bpy.data.node_groups["Split Toning"]
+    node.show_options = False
 
     return node
 
