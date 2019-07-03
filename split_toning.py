@@ -9,8 +9,8 @@ bl_info = {
     "description": "Simulating the Split Toning effect in Adobe Lightroom/Photoshop",
     "warning": "",
     "support": "TESTING",
-    "wiki_url": "",
-    "tracker_url": "",
+    "wiki_url": "https://github.com/yuki-koyama/split-toning",
+    "tracker_url": "https://github.com/yuki-koyama/split-toning/issues",
     "category": "Node"
 }
 
