@@ -139,9 +139,9 @@ def create_split_tone_node(node_tree):
     return node
 
 
-class AddSplitToningNodeOperator(bpy.types.Operator):
-    bl_idname = "node.add_split_toning_node_operator"
-    bl_label = "Split-Toning"
+class SPLIT_TONING_OP_AddSplitToningNode(bpy.types.Operator):
+    bl_idname = "node.add_split_toning_node"
+    bl_label = "Split Toning"
     bl_options = {"REGISTER", "UNDO"}
 
     def execute(self, context):
@@ -160,7 +160,7 @@ class AddSplitToningNodeOperator(bpy.types.Operator):
 
 def menu_func(self, context):
     self.layout.separator()
-    self.layout.operator(AddSplitToningNodeOperator.bl_idname)
+    self.layout.operator(SPLIT_TONING_OP_AddSplitToningNode.bl_idname)
 
 
 def register():
