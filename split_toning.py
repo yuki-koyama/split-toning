@@ -4,8 +4,8 @@ bl_info = {
     "name": "split-toning",
     "author": "Yuki Koyama",
     "version": (1, 0),
-    "blender": (2, 79, 0),
-    "location": "Node Editor > Add",
+    "blender": (2, 80, 0),
+    "location": "Compositor > Add",
     "description": "Simulating the Split Toning effect in Adobe Lightroom/Photoshop",
     "warning": "",
     "support": "TESTING",
@@ -139,9 +139,10 @@ def create_split_tone_node(node_tree):
     return node
 
 
-class AddSplitToningNodeOperator(bpy.types.Operator):
-    bl_idname = "node.add_split_toning_node_operator"
-    bl_label = "Split-Toning"
+class SPLIT_TONING_OP_AddSplitToningNode(bpy.types.Operator):
+    bl_idname = "node.add_split_toning_node"
+    bl_label = "Split Toning"
+    bl_description = "Add a split-toning node to the active tree"
     bl_options = {"REGISTER", "UNDO"}
 
     def execute(self, context):
@@ -160,21 +161,27 @@ class AddSplitToningNodeOperator(bpy.types.Operator):
 
 def menu_func(self, context):
     self.layout.separator()
-    self.layout.operator(AddSplitToningNodeOperator.bl_idname)
+    self.layout.operator(SPLIT_TONING_OP_AddSplitToningNode.bl_idname)
 
 
-def register():
-    bpy.utils.register_module(__name__)
-    bpy.types.NODE_MT_add.append(menu_func)
+if bpy.app.version >= (2, 80, 0):
 
-    print("split-toning: registered.")
+    def register():
+        bpy.utils.register_class(SPLIT_TONING_OP_AddSplitToningNode)
+        bpy.types.NODE_MT_add.append(menu_func)
 
+    def unregister():
+        bpy.types.NODE_MT_add.remove(menu_func)
+        bpy.utils.unregister_class(SPLIT_TONING_OP_AddSplitToningNode)
+else:
 
-def unregister():
-    bpy.types.NODE_MT_add.remove(menu_func)
-    bpy.utils.unregister_module(__name__)
+    def register():
+        bpy.utils.register_module(__name__)
+        bpy.types.NODE_MT_add.append(menu_func)
 
-    print("split-toning: unregistered.")
+    def unregister():
+        bpy.types.NODE_MT_add.remove(menu_func)
+        bpy.utils.unregister_module(__name__)
 
 
 if __name__ == "__main__":
