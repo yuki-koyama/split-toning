@@ -1,6 +1,6 @@
 # split-toning
 
-A Blender add-on for simulating the __Split Toning__ effect in Adobe Lightroom/Photoshop
+A Blender add-on to provide a compositor node for simulating the __Split Toning__ effect in Adobe Photoshop/Lightroom.
 
 ## Example
 
@@ -26,7 +26,7 @@ Go to `Compositor` and open the `Add` menu; you'll find a `Split Toning` option.
 
 ![](./docs/menu.jpg)
 
-Once clicking the `Split-Toning` option, a node will be added to the current node tree. The node can be linked to other nodes in a standard way.
+Once clicking the `Split Toning` option, a node will be added to the active node tree. The node can be linked to other nodes in a standard way.
 
 ![](./docs/node.jpg)
 
