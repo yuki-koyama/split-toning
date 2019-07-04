@@ -142,6 +142,7 @@ def create_split_tone_node(node_tree):
 class SPLIT_TONING_OP_AddSplitToningNode(bpy.types.Operator):
     bl_idname = "node.add_split_toning_node"
     bl_label = "Split Toning"
+    bl_description = "Add a split-toning node to the active tree"
     bl_options = {"REGISTER", "UNDO"}
 
     def execute(self, context):
