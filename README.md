@@ -22,7 +22,7 @@ Download the latest zip file of this repository from this link: <https://github.
 
 Open the `User Preference` widget, install the add-on by choosing `split_toning.py` from `Install Add-on from File...`, and enable the add-on.
 
-Go to `Node Editor` and open the `Add` menu; you'll find a `Split-Toning` option.
+Go to `Compositor` and open the `Add` menu; you'll find a `Split Toning` option.
 
 ![](./docs/menu.jpg)
 
@@ -32,7 +32,7 @@ Once clicking the `Split-Toning` option, a node will be added to the current nod
 
 ## Blender Version
 
-Currently, only Blender 2.79 is supported. We plan to support Blender 2.80 very soon ;)
+__Blender 2.8__. It can also be used with Blender 2.7x although it will show some warnings.
 
 ## Why not using the _Color Balance_ node?
 

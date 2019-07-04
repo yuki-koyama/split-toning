@@ -5,7 +5,7 @@ bl_info = {
     "author": "Yuki Koyama",
     "version": (1, 0),
     "blender": (2, 80, 0),
-    "location": "Node Editor > Add",
+    "location": "Compositor > Add",
     "description": "Simulating the Split Toning effect in Adobe Lightroom/Photoshop",
     "warning": "",
     "support": "TESTING",
