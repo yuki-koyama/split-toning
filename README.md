@@ -18,9 +18,9 @@ Adjusted (2):
 
 ## Usage
 
-Download the latest zip file of this repository from this link: <https://github.com/yuki-koyama/split-toning/archive/master.zip>, and extract files from the zip file.
+Download the latest zip file of this repository from this link: <https://github.com/yuki-koyama/split-toning/archive/master.zip>.
 
-Open the `User Preference` widget, install the add-on by choosing `split_toning.py` from `Install Add-on from File...`, and enable the add-on.
+Open the `User Preference` widget, install the add-on by choosing the downloaded zip file (`split-toning-master.zip`) from `Install Add-on from File...`, and enable the add-on.
 
 Go to `Compositor` and open the `Add` menu; you'll find a `Split Toning` option.
 
