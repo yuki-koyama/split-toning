@@ -54,3 +54,13 @@ Requests, suggestions, issues, and PRs are highly welcomed!
 ## Code Formatting
 
 <https://wiki.blender.org/wiki/Style_Guide/Python>
+
+## Versioning
+
+We follow [the PEP440 rules](https://www.python.org/dev/peps/pep-0440/) except that we use `-` (hyphen) instead of `.` (period). For example, the version `1-2` means its major version is `1` and its minor version is `2`. `1-3rc1`, `1-4-dev2` are valid version tags.
+
+### Why Use Hyphens?
+
+Blender add-ons directories are not allowed to use `.` (period) in their names.
+
+To install zip files downloaded via GitHub's tagged zip download functionality (e.g., <https://github.com/yuki-koyama/split-toning/archive/1-2.zip>) directly into Blender as add-ons, we cannot use `.` (period) in tag names.
