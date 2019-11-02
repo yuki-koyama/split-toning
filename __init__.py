@@ -164,24 +164,14 @@ def menu_func(self, context):
     self.layout.operator(SPLIT_TONING_OP_AddSplitToningNode.bl_idname)
 
 
-if bpy.app.version >= (2, 80, 0):
+def register():
+    bpy.utils.register_class(SPLIT_TONING_OP_AddSplitToningNode)
+    bpy.types.NODE_MT_add.append(menu_func)
 
-    def register():
-        bpy.utils.register_class(SPLIT_TONING_OP_AddSplitToningNode)
-        bpy.types.NODE_MT_add.append(menu_func)
 
-    def unregister():
-        bpy.types.NODE_MT_add.remove(menu_func)
-        bpy.utils.unregister_class(SPLIT_TONING_OP_AddSplitToningNode)
-else:
-
-    def register():
-        bpy.utils.register_module(__name__)
-        bpy.types.NODE_MT_add.append(menu_func)
-
-    def unregister():
-        bpy.types.NODE_MT_add.remove(menu_func)
-        bpy.utils.unregister_module(__name__)
+def unregister():
+    bpy.types.NODE_MT_add.remove(menu_func)
+    bpy.utils.unregister_class(SPLIT_TONING_OP_AddSplitToningNode)
 
 
 if __name__ == "__main__":

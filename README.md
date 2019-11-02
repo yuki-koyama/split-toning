@@ -32,7 +32,7 @@ Once clicking the `Split Toning` option, a node will be added to the active node
 
 ## Supported Blender Version
 
-__Blender 2.8__. It can also be used with Blender 2.79 although it will show some warnings.
+__Blender 2.80__ or later.
 
 ## Why not using the _Color Balance_ node?
 
@@ -40,7 +40,7 @@ The effect of `Split Toning` itself is very similar to the `Color Balance` node 
 
 - __Controllable Highlights-Shadows balance__: `Split Toning` provides a parameter called `Balance`, which controls how highlights and shadows are split.
 - __Fewer parameters__: `Split Toning` has only five parameters and so it is easier to explore possible effects.
-- __Brightness preservation__: `Split Toning` only alters the hue and saturation of the image, and does not alter the brightness (strictly speaking, the `value` of HSV). This makes it much easier to control the colorfulness and brightness.
+- __Brightness preservation__: `Split Toning` only alters the hue and saturation of the image and does not alter the brightness (strictly speaking, the `value` of HSV). This makes it much easier to control the colorfulness and brightness.
 - __Photoshop-users friendliness__: `Split Toning` is very similar to the one in Adobe Photoshop/Lightroom.
 
 ## License
